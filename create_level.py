@@ -61,6 +61,9 @@ print(f'Created: {readme_file}')
 # Create empty example input file
 Path(os.path.join(level_name, '{}a-example.txt'.format(level))).touch()
 print(f'Created dummy input files')
+# Create empty example input file
+
+Path(os.path.join(level_name, 'puzzle.txt')).touch()
 
 if AOC_SESSION_COOKIE:
     response = requests.get(f'https://adventofcode.com/{AOC_YEAR}/day/{level}/input', cookies={'session': AOC_SESSION_COOKIE})
